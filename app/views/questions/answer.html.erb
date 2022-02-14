@@ -1,0 +1,27 @@
+<br>
+
+<h1>Stupid coach</h1>
+
+<br>
+
+<div id="question">
+<p><%= @my_question.capitalize %></p>
+<p>- You</p>
+</div>
+
+<br>
+
+<div id="answer">
+<% if @my_question == "I am going to work" %>
+  <p><%= "Great!" %></p>
+<% elsif @my_question.end_with?("?") %>
+  <p><%= "Silly question, get dressed and go to work!" %></p>
+<% else %>
+  <p><%= "I don't care, get dressed and go to work!" %></p>
+<% end %>
+<p>- Coach</p>
+</div>
+
+<br>
+
+<a href="/ask">Say something else to your coach</a>
